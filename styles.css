@@ -1,0 +1,100 @@
+/* Wedding invitation styles */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&display=swap');
+
+body {
+    font-family: 'Cormorant Garamond', serif;
+    background-color: #faf9f6;
+    margin: 0;
+    padding: 0;
+    color: #5a5a5a;
+    background-image: url('background.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.header {
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+.names {
+    font-size: 3.5rem;
+    color: #9e7b5d;
+    font-weight: 300;
+    margin-bottom: 10px;
+    line-height: 1.2;
+}
+
+.invitation-text {
+    font-size: 1.5rem;
+    margin: 30px 0;
+    line-height: 1.8;
+}
+
+.date-venue {
+    background-color: rgba(158, 123, 93, 0.1);
+    padding: 40px;
+    margin: 40px 0;
+    border-radius: 5px;
+}
+
+.date, .venue {
+    font-size: 1.5rem;
+    margin: 15px 0;
+}
+
+.time {
+    font-size: 2rem;
+    color: #9e7b5d;
+    margin: 15px 0;
+    font-weight: bold;
+}
+
+.divider {
+    height: 2px;
+    width: 100px;
+    background-color: #9e7b5d;
+    margin: 30px auto;
+}
+
+.footer {
+    margin-top: 50px;
+    font-size: 1.2rem;
+}
+
+.hearts {
+    font-size: 2rem;
+    color: #d7a78b;
+    margin: 20px 0;
+}
+
+@media (max-width: 768px) {
+    .names {
+        font-size: 2.5rem;
+    }
+    
+    .invitation-text {
+        font-size: 1.2rem;
+    }
+    
+    .date, .venue {
+        font-size: 1.2rem;
+    }
+    
+    .time {
+        font-size: 1.5rem;
+    }
+}

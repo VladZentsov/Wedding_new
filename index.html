@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Запрошення на весілля Владислава та Вікторії</title>
+    <style>
+        body {
+            font-family: 'Cormorant Garamond', serif;
+            background-color: #faf9f6;
+            margin: 0;
+            padding: 0;
+            color: #5a5a5a;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .header {
+            margin-top: 50px;
+            margin-bottom: 30px;
+        }
+        
+        .names {
+            font-size: 3.5rem;
+            color: #9e7b5d;
+            font-weight: 300;
+            margin-bottom: 10px;
+            line-height: 1.2;
+        }
+        
+        .invitation-text {
+            font-size: 1.5rem;
+            margin: 30px 0;
+            line-height: 1.8;
+        }
+        
+        .date-venue {
+            background-color: rgba(158, 123, 93, 0.2);
+            padding: 50px;
+            margin: 60px 0;
+            border-radius: 8px;
+            border: 2px solid #9e7b5d;
+            box-shadow: 0 5px 15px rgba(158, 123, 93, 0.3);
+            transform: scale(1.05);
+        }
+        
+        .date, .venue {
+            font-size: 1.8rem;
+            margin: 20px 0;
+            font-weight: 500;
+        }
+
+        .address {
+            font-size: 1.5rem;
+            margin: 20px 0;
+            font-weight: 500;
+        }
+        
+        .time {
+            font-size: 2.5rem;
+            color: #9e7b5d;
+            margin: 25px 0;
+            font-weight: bold;
+        }
+        
+        .divider {
+            height: 2px;
+            width: 100px;
+            background-color: #9e7b5d;
+            margin: 30px auto;
+        }
+        
+        .footer {
+            margin-top: 50px;
+            font-size: 1.2rem;
+        }
+        
+        .map-section {
+            margin: 40px 0;
+        }
+        
+        .map-container {
+            width: 100%;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin: 20px 0;
+        }
+        
+        .map-link {
+            display: inline-block;
+            background-color: #9e7b5d;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-size: 1.1rem;
+            margin: 15px 0;
+            transition: background-color 0.3s;
+        }
+        
+        .map-link:hover {
+            background-color: #876a50;
+        }
+        
+        /* Carousel Styles */
+        .carousel {
+            position: relative;
+            max-width: 800px;
+            margin: 40px auto;
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .carousel-inner {
+            display: flex;
+            height: auto;
+        }
+        
+        .carousel-item {
+            width: 33.333%;
+            padding: 5px;
+            box-sizing: border-box;
+        }
+        
+        .carousel-item img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 4px;
+        }
+        
+        /* Hide carousel controls and indicators since we're showing all images */
+        .carousel-controls,
+        .carousel-indicators {
+            display: none;
+        }
+        
+        .dress-code {
+            background-color: rgba(158, 123, 93, 0.1);
+            padding: 30px;
+            margin: 40px 0;
+            border-radius: 8px;
+            text-align: center;
+        }
+        
+        .dress-code h3 {
+            font-size: 1.8rem;
+            color: #9e7b5d;
+            margin-bottom: 20px;
+        }
+        
+        .dress-code p {
+            font-size: 1.3rem;
+            line-height: 1.6;
+            margin-bottom: 25px;
+        }
+        
+        .color-palette {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 25px;
+            margin: 20px auto 40px;
+            max-width: 600px;
+        }
+        
+        .color-sample {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: relative;
+            margin-bottom: 30px;  /* Add extra bottom margin for the text */
+        }
+        
+        .color-sample span {
+            position: absolute;
+            bottom: -25px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 70px; /* Fixed width for text */
+            text-align: center;
+            font-size: 0.9rem;
+            white-space: nowrap;
+        }
+        
+        .rsvp-notice {
+            background-color: #9e7b5d;
+            color: white;
+            padding: 25px;
+            margin: 40px 0;
+            border-radius: 8px;
+            text-align: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+            box-shadow: 0 4px 15px rgba(158, 123, 93, 0.5);
+            border: 2px solid #876a50;
+            animation: pulse 2s infinite;
+            position: relative;
+        }
+        
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.03); }
+            100% { transform: scale(1); }
+        }
+        
+        @media (max-width: 768px) {
+            .names {
+                font-size: 2.5rem;
+            }
+            
+            .invitation-text {
+                font-size: 1.2rem;
+            }
+            
+            .date, .venue {
+                font-size: 1.2rem;
+            }
+            
+            .time {
+                font-size: 1.5rem;
+            }
+            
+            .map-link {
+                font-size: 0.9rem;
+                padding: 8px 16px;
+            }
+            
+            .map-container {
+                height: 300px;
+            }
+            
+            .carousel-item {
+                width: 100%;
+                height: auto;
+            }
+            
+            .carousel-inner {
+                flex-direction: column;
+            }
+            
+            .carousel-item img {
+                height: 250px;
+                margin-bottom: 10px;
+            }
+
+            .dress-code p {
+                font-size: 1.1rem;
+            }
+            
+            .color-palette {
+                gap: 15px 30px; /* Vertical gap 15px, horizontal gap 30px */
+                margin-bottom: 30px;
+            }
+            
+            .color-sample {
+                width: 40px;
+                height: 40px;
+                margin-bottom: 35px; /* Increased bottom margin for text */
+            }
+            
+            .color-sample span {
+                font-size: 0.8rem;
+                bottom: -25px;
+            }
+
+            .no-flowers p {
+                font-size: 1.1rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .color-palette {
+                max-width: 270px;
+                gap: 40px 20px; /* More vertical space between rows */
+            }
+            
+            .color-sample {
+                width: 35px;
+                height: 35px;
+                margin-bottom: 35px;
+                /* Force 3 per row by setting fixed width */
+                flex: 0 0 calc(33.333% - 20px);
+            }
+        }
+        
+        /* No Flowers Section */
+        .no-flowers {
+            background-color: rgba(158, 123, 93, 0.1);
+            padding: 30px;
+            margin: 40px 0;
+            border-radius: 8px;
+            text-align: center;
+        }
+        
+        .no-flowers h3 {
+            font-size: 1.8rem;
+            color: #9e7b5d;
+            margin-bottom: 20px;
+        }
+        
+        .no-flowers p {
+            font-size: 1.3rem;
+            line-height: 1.6;
+            margin-bottom: 10px;
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1 class="names">Запрошення на весілля Владислава та Вікторії</h1>
+            <div class="divider"></div>
+        </div>
+        
+        <!-- Photo Carousel -->
+        <div class="carousel">
+            <div class="carousel-inner" id="carouselInner">
+                <div class="carousel-item">
+                    <img src="ring.jpg" alt="Владислав і Вікторія">
+                </div>
+                <div class="carousel-item">
+                    <img src="kneels.jpg" alt="Владислав і Вікторія">
+                </div>
+                <div class="carousel-item">
+                    <img src="double.jpg" alt="Владислав і Вікторія">
+                </div>
+            </div>
+        </div>
+        
+        <div class="invitation-text">
+            <p>З радістю запрошуємо Вас розділити з нами найщасливіший день у нашому житті!</p>
+            <p>Ми одружуємося і будемо раді бачити Вас на нашому весіллі!</p>
+        </div>
+        
+        <div class="divider"></div>
+        
+        <div class="date-venue">
+            <p class="date">Дата весілля:</p>
+            <div class="time">12 липня 2025 р.</div>
+            <p class="date">Час початку:</p>
+            <div class="time">14:00</div>
+            <p class="venue">Місце проведення:</p>
+            <p class="time">Заміський ресторан "The Village"</p>
+            <p class="address">вул. Сурська 139а, Новоолександрівка,<br>Дніпропетровська область, 52070</p>
+        </div>
+
+        <!-- Google Map Section -->
+        <div class="map-section">
+            <h3>Місце розташування</h3>
+            <div class="map-container">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2642.731826202928!2d35.01291887687205!3d48.527482129007036!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40dbe3ed982e379f%3A0xb345d570e16d1692!2z0LLRg9C70LjRhtGPINCh0YPRgNGB0YzQutCwLCAxMzksINCd0L7QstC-0L7Qu9C10LrRgdCw0L3QtNGA0ZbQstC60LAsINCU0L3RltC_0YDQvtC_0LXRgtGA0L7QstGB0YzQutCwINC-0LHQu9Cw0YHRgtGMLCA1MjA3MA!5e0!3m2!1suk!2sua!4v1718015355487!5m2!1suk!2sua" 
+                    width="100%" 
+                    height="400" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </div>
+        
+        <div class="dress-code">
+            <h3>Дрес-код</h3>
+            <p>Для нас головне - ваша присутність! Але ми будемо раді, якщо у своїх вбраннях ви підтримаєте кольорову гаму нашого весілля: ніжні світлі відтінки.</p>
+            
+            <div class="color-palette">
+                <div class="color-sample" style="background-color: #F8D7DB;">
+                    <span>Рожевий</span>
+                </div>
+                <div class="color-sample" style="background-color: #D5E4F1;">
+                    <span>Блакитний</span>
+                </div>
+                <div class="color-sample" style="background-color: #E8F4D5;">
+                    <span>М'ятний</span>
+                </div>
+                <div class="color-sample" style="background-color: #E6D7EA;">
+                    <span>Лавандовий</span>
+                </div>
+                <div class="color-sample" style="background-color: #FFF4CC;">
+                    <span>Жовтий</span>
+                </div>
+                <div class="color-sample" style="background-color: #FDDFD7;">
+                    <span>Персиковий</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="no-flowers">
+            <h3>Щодо подарунків</h3>
+            <p>Плануємо весільну подорож, тому будемо вдячні, якщо замість квітів Ви привітаєте нас іншим способом💸😝</p>
+                <p><b>Обов'язково</b> на свято взяти з собою гарний настрій😏❤️</p>
+        </div>
+        
+        
+        <div class="divider"></div>
+        
+        <div class="rsvp-notice">
+            Просимо підтвердити свою присутність до 08.06.2025.
+        </div>
+        
+        <div class="footer">
+            <p>З любов'ю, Владислав і Вікторія❤️❤️❤️</p>
+        </div>
+    </div>
+
+    <script>
+        // Carousel functionality
+        let currentSlide = 0;
+        const totalSlides = document.querySelectorAll('.carousel-item').length;
+        const carouselInner = document.getElementById('carouselInner');
+        const indicatorsContainer = document.getElementById('indicators');
+        
+        // No need for indicators or carousel controls since all photos are visible
+        // Clear the indicators container
+        indicatorsContainer.innerHTML = '';
+        
+        // Remove transform property to show all images
+        carouselInner.style.transform = 'none';
+        
+        // Remove the auto-advance
+        // Note: The rest of the functions can stay in the code but won't be used
+        
+        function updateCarousel() {
+            // No need to update anything as all images are visible
+        }
+        
+        function moveSlide(direction) {
+            // This function is no longer needed but kept for compatibility
+        }
+        
+        function goToSlide(slideIndex) {
+            // This function is no longer needed but kept for compatibility
+        }
+    </script>
+</body>
+</html>
+
+
+</body>
+</html>
