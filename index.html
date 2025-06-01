@@ -10,7 +10,7 @@
             background-color: #faf9f6;
             margin: 0;
             padding: 0;
-            color: #5a5a5a;
+            color: #242424;
         }
         
         .container {
@@ -31,6 +31,12 @@
             font-weight: 300;
             margin-bottom: 10px;
             line-height: 1.2;
+        }
+
+        .simple-text {
+            font-size: 1.6rem !important;
+            font-weight: 600 !important;
+            color: #242424 !important;
         }
         
         .invitation-text {
@@ -56,6 +62,8 @@
         }
 
         .address {
+            color: #242424;
+            font-weight: 500;
             font-size: 1.5rem;
             margin: 20px 0;
             font-weight: 500;
@@ -150,12 +158,6 @@
             text-align: center;
         }
         
-        .dress-code h3 {
-            font-size: 1.8rem;
-            color: #9e7b5d;
-            margin-bottom: 20px;
-        }
-        
         .dress-code p {
             font-size: 1.3rem;
             line-height: 1.6;
@@ -166,7 +168,7 @@
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
-            gap: 25px;
+            gap: 40px;
             margin: 20px auto 40px;
             max-width: 600px;
         }
@@ -187,7 +189,7 @@
             transform: translateX(-50%);
             width: 70px; /* Fixed width for text */
             text-align: center;
-            font-size: 0.9rem;
+            font-size: 1rem;
             white-space: nowrap;
         }
         
@@ -198,7 +200,7 @@
             margin: 40px 0;
             border-radius: 8px;
             text-align: center;
-            font-size: 1.5rem;
+            font-size: 1.8rem;
             font-weight: bold;
             box-shadow: 0 4px 15px rgba(158, 123, 93, 0.5);
             border: 2px solid #876a50;
@@ -227,7 +229,13 @@
             }
             
             .time {
-                font-size: 1.5rem;
+                font-size: 1.8rem;
+            }
+
+            .simple-text {
+                font-size: 1.6rem !important;
+                font-weight: 600 !important;
+                color: #242424 !important;
             }
             
             .map-link {
@@ -272,10 +280,6 @@
                 font-size: 0.8rem;
                 bottom: -25px;
             }
-
-            .no-flowers p {
-                font-size: 1.1rem;
-            }
         }
         
         @media (max-width: 480px) {
@@ -301,18 +305,7 @@
             border-radius: 8px;
             text-align: center;
         }
-        
-        .no-flowers h3 {
-            font-size: 1.8rem;
-            color: #9e7b5d;
-            margin-bottom: 20px;
-        }
-        
-        .no-flowers p {
-            font-size: 1.3rem;
-            line-height: 1.6;
-            margin-bottom: 10px;
-        }
+    
     </style>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
@@ -327,10 +320,10 @@
         <div class="carousel">
             <div class="carousel-inner" id="carouselInner">
                 <div class="carousel-item">
-                    <img src="ring.jpg" alt="Владислав і Вікторія">
+                    <img src="We.jpg" alt="Владислав і Вікторія">
                 </div>
                 <div class="carousel-item">
-                    <img src="kneels.jpg" alt="Владислав і Вікторія">
+                    <img src="ring.jpg" alt="Владислав і Вікторія">
                 </div>
                 <div class="carousel-item">
                     <img src="double.jpg" alt="Владислав і Вікторія">
@@ -338,7 +331,7 @@
             </div>
         </div>
         
-        <div class="invitation-text">
+        <div class="simple-text invitation-text">
             <p>З радістю запрошуємо Вас розділити з нами найщасливіший день у нашому житті!</p>
             <p>Ми одружуємося і будемо раді бачити Вас на нашому весіллі!</p>
         </div>
@@ -346,13 +339,13 @@
         <div class="divider"></div>
         
         <div class="date-venue">
-            <p class="date">Дата весілля:</p>
+            <p class="date simple-text">Дата весілля:</p>
             <div class="time">12 липня 2025 р.</div>
-            <p class="date">Час початку:</p>
+            <p class="date simple-text">Час початку:</p>
             <div class="time">14:00</div>
-            <p class="venue">Місце проведення:</p>
+            <p class="venue simple-text">Місце проведення:</p>
             <p class="time">Заміський ресторан "The Village"</p>
-            <p class="address">вул. Сурська 139а, Новоолександрівка,<br>Дніпропетровська область, 52070</p>
+            <p class="address ">вул. Сурська 139а, Новоолександрівка,<br>Дніпропетровська область, 52070</p>
         </div>
 
         <!-- Google Map Section -->
@@ -372,8 +365,8 @@
         </div>
         
         <div class="dress-code">
-            <h3>Дрес-код</h3>
-            <p>Для нас головне - ваша присутність! Але ми будемо раді, якщо у своїх вбраннях ви підтримаєте кольорову гаму нашого весілля: ніжні світлі відтінки.</p>
+            <h3 class="time">Дрес-код</h3>
+            <p class="simple-text">Для нас головне - ваша присутність! Але ми будемо раді, якщо у своїх вбраннях ви підтримаєте кольорову гаму нашого весілля: ніжні світлі відтінки.</p>
             
             <div class="color-palette">
                 <div class="color-sample" style="background-color: #F8D7DB;">
@@ -398,9 +391,11 @@
         </div>
         
         <div class="no-flowers">
-            <h3>Щодо подарунків</h3>
-            <p>Плануємо весільну подорож, тому будемо вдячні, якщо замість квітів Ви привітаєте нас іншим способом💸😝</p>
+            <h3 class="time">Щодо подарунків</h3>
+            <div class="simple-text">
+                <p>Плануємо весільну подорож, тому будемо вдячні, якщо замість квітів Ви привітаєте нас іншим способом💸😝</p>
                 <p><b>Обов'язково</b> на свято взяти з собою гарний настрій😏❤️</p>
+            </div>
         </div>
         
         
